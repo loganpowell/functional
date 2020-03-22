@@ -1,4 +1,14 @@
 import { log, table } from "../utils"
+
+// 
+//  .____    ____. 
+//  |   _|  |_   | 
+//  |  |      |  | 
+//  |  |      |  | 
+//  |  |_    _|  | 
+//  |____|  |____| 
+// 
+
 /* INTERMEDIATE COLLECTIONS
 Array methods in JS return intermediate collections upon every use
 */

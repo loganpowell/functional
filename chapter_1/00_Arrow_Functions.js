@@ -1,14 +1,27 @@
 import { log } from "../utils"
 
-//basics
-let factory = c => ({ a: "b", c })
-log("factory ->", factory("d"))
+//
+//     ___  ___               __
+//    /  /  \  \      ______  \ \
+//   /  /    \  \    /_____/   \ \
+//  (  (      )  )   /_____/   / /
+//   \  \    /  /             /_/
+//    \__\  /__/
+//
 
-let default_args = (x = 1) => x
-log("default_args ->", default_args())
+//basics
+
+let implicit_return = a => `hello ${a}!`
+implicit_return("you") //?
+
+let factory = c => ({ a: "b", c })
+factory("d") //?
+
+let default_args = (x = "did you forget something?") => x
+default_args() //?
 
 let RHS_ternary = x => (x % 2 === 0 ? "even!" : "odd!")
-log("RHS_ternary ->", RHS_ternary(3))
+RHS_ternary(3) //?
 
 let RHS_expressions = x => (x++, x++, x)
 log("RHS_expressions ->", RHS_expressions(0))
@@ -24,6 +37,7 @@ let IIFE_module = (() => {
   let hidden = "🙈"
   return hidden
 })()
+
 log("IIFE_module (value) ->", IIFE_module)
 
 /* CLOSURES

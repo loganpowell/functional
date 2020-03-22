@@ -92,6 +92,6 @@ while_    5   
 /* KEY TAKEAWAYS
 1. for is slower than forEach and very much uglier, don't use it
 2. while is the fastest if you need a single-condition loop construct
-3. map is the second-slowest, but if you need a fluent-API (dot-chaining), it's the only one that returns an array (that can be re-operated on) natively
+3. map is the second-slowest, but if you need a fluent-API (dot-chaining), it's the only one that returns an array (that can be re-operated on) natively. I.e., if you don't need an array returned, use forEach instead
 4. for..of is the slowest, so we shouldn't ever use it... or should we? We'll get back to this later in Chapter two
 */
